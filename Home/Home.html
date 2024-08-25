@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="search.css">
+    <style>
+        /* CSS styles for smaller images */
+        .smaller-image {
+            width: 40px; /* Adjust the width to your preference */
+            height: 40px; /* Adjust the height to your preference */
+        }
+    
+        /* CSS styles for the score text */
+        .score-text {
+            margin-left: 5px; /* Adjust the margin to add space between image and text */
+            font-size: 35px;
+            font-weight: bold /* Adjust the font size to your preference */
+        }
+        .larger-text {
+        font-size: 30px; /* Adjust the font size to your preference */
+        font-weight: bold; /* Optionally, add bold style */
+    }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+                class="icn menuicn" id="menuicn" alt="menu-icon">
+            <div class="logo">CODE_BOOK</div>
+            
+        </div>
+
+        <div class="input__container">
+            <div class="shadow__input"></div>
+            <button class="input__button__shadow">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="40px" width="40px">
+                    <path
+                        d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z"
+                        fill-rule="evenodd" fill="#17202A"></path>
+                </svg>
+            </button>
+            <input type="text" name="text" class="input__search" placeholder="What do you want to search?">
+        </div>
+        <!--change i did-->
+        <div class="data-box">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.flZ5-vzKgWJOF52gxvbZ8AHaHa&pid=Api&P=0&h=180" alt="Score Icon" class="score-icon smaller-image">
+            <span class="score-text">Score: <span class="larger-text">0</span></span>
+            <!-- Add any additional content as needed -->
+        </div>
+
+ <!-- ... (your existing HTML) ... -->
+
+<div class="message" id="message">
+    <div class="circle"></div>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
+    <div class="dp">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+            class="dpicn" alt="dp">
+    </div>
+</div>
+
+<!-- ... (rest of your HTML) ... -->
+
+
+    </header>
+
+    <div id="main-container" class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <button class="nav-option option1">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                            class="nav-img" alt="dashboard">
+                        <h3> Dashboard</h3>
+                    </button>
+
+                    <button class="option2 nav-option">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                            class="nav-img" alt="articles">
+                        <h3> Videos to learn</h3>
+                    </button>
+
+                    <button class="nav-option report" id="reportButton">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                        <h3> Coding<br>Competitions</h3>
+                    </button>
+                    
+
+                    <button class="nav-option coding-games">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="coding_games">
+                        <h3> Coding Games</h3>
+                    </button>
+                    
+
+                    <button class="nav-option option5">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                            class="nav-img" alt="blog">
+                        <h3> Profile</h3>
+                    </button>
+
+                    <button class="nav-option option6">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                            class="nav-img" alt="settings">
+                        <a href="../LandingPage/settings.html"><h3> Settings</h3></a>
+                    </button>
+
+                    <button class="nav-option logout">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                            class="nav-img" alt="logout">
+                        <a href="../LandingPage/CodeBook1.html"><h3>Logout</h3></a>
+                    </button>
+
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+
+
+            <div class="box-container">
+
+ <!-- ... (your existing HTML) ... -->
+
+<button id="button1" class="box box1">
+    <div class="text">
+        <h3 class="topic-heading">code with dashboard contents</h3>
+        
+    </div>
+
+</button>
+
+<!-- ... (repeat for other buttons) ... -->
+
+
+<!-- ... (your existing HTML) ... -->
+
+<button id="button3" class="box box3">
+    <div class="text">
+        <h2 class="topic-heading">Leaderboard</h2>
+        <h2 class="topic">progress</h2>
+    </div>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+        alt="Views">
+</button>
+
+<button id="button4" class="box box4">
+    <div class="text">
+        <h2 class="topic-heading">learn with game</h2>
+        <h2 class="topic">start_learning</h2>
+    </div>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
+</button>
+
+<!-- ... (repeat for other buttons) ... -->
+
+
+            <div class="report-container">
+                <div class="report-header">
+                    <h1 class="recent-Articles">Course</h1>
+                    <button class="view">View All</button>
+                </div>
+
+                <div class="report-body">
+                    <div class="report-topic-heading">
+                        <h3 class="t-op">S.no</h3>
+                        <h3 class="t-op">Languages</h3>
+                        <h3 class="t-op">Status</h3>
+                    </div>
+
+ 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">1</h3> 
+                            <h3 class="t-op-nextlvl">C</h3> 
+
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">2</h3> 
+                            <h3 class="t-op-nextlvl">C++</h3> 
+    
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">3</h3> 
+                            <h3 class="t-op-nextlvl">Python</h3> 
+        
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">4</h3> 
+                            <h3 class="t-op-nextlvl">Java</h3> 
+ 
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">5</h3> 
+                            <h3 class="t-op-nextlvl">Ruby</h3> 
+
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">6</h3> 
+                            <h3 class="t-op-nextlvl">C#</h3> 
+
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">7</h3> 
+                            <h3 class="t-op-nextlvl">Data structures</h3> 
+           
+                            <h3 class="t-op-nextlvl label-tag">Available</h3> 
+                        </div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+   
+   let menuicn = document.querySelector(".menuicn");
+        let nav = document.querySelector(".navcontainer");
+        let message = document.getElementById("message");
+        let reportContainer = document.querySelector(".report-container");
+
+        menuicn.addEventListener("click", () => {
+            nav.classList.toggle("navclose");
+        });
+
+        message.addEventListener("click", () => {
+            window.location.href = 'profile_page.html';
+        });
+
+
+
+  
+
+        document.getElementById('button3').addEventListener('click', function () {
+            window.location.href = 'next_page3.html';
+        });
+        document.querySelector('.coding-games').addEventListener('click', function () {
+        // Replace 'your_coding_games_link.html' with the actual link you want to open
+        window.location.href = 'https://shecancode.io/coding-games/';
+    });
+        document.getElementById('button4').addEventListener('click', function () {
+            window.location.href = 'language_page.html'; // Change to the new page
+        });
+        document.getElementById('button3').addEventListener('click', function () {
+        // Replace 'leaderboard-container' with the actual ID or class of your leaderboard container
+        var leaderboardContainer = document.querySelector('.leaderboard-container');
+        
+        // Toggle the visibility of the leaderboard container
+        if (leaderboardContainer.style.display === 'none' || leaderboardContainer.style.display === '') {
+            leaderboardContainer.style.display = 'block';
+        } else {
+            leaderboardContainer.style.display = 'none';
+        }
+    });
+    document.getElementById('reportButton').addEventListener('click', function () {
+        // Replace 'your_report_link.html' with the actual link you want to open
+        window.location.href = 'https://www.hackerearth.com/challenges/';
+    });
+    document.querySelector('.option2').addEventListener('click', function () {
+        // Replace 'your_youtube_video_link' with the actual YouTube video link you want to open
+        window.location.href = 'https://youtube.com/@CodeWithHarry';
+    });
+    document.getElementById('button3').addEventListener('click', function () {
+        // Redirect to the leaderboard.html page
+        window.location.href = 'leaderboard.html';
+    });
+    
+    function logout() {
+        // Replace 'your_landing_page_link.html' with the actual link you want to open
+        window.location.href = '\LandingPage\CodeBook1.html';
+    }
+    </script>
+</body>
+
+</html>
