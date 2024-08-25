@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>category</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+            color:#1edd37;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 40;
+            min-width: 50%;
+            min-height: 50%;
+            z-index: -1; /* Place the video behind other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"><br><b><br>&emsp;CODE_BOOK</b></div>
+    <video autoplay muted loop>
+        <source src="https://www.desktophut.com/files/1657714788-1657714788-rgb-minimalistic-waves-live-wallpaper.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <form action="" class="container">
+        <input class="input-btn" type="radio" id="valueIs-1" name="valueIs-radio" checked="" value="valueIs-1">
+        <label class="neon-btn" for="valueIs-1">
+            <span class="span"></span>
+            <a href="../Home/Home.html"><span class="txt">BEGINNER</span></a>
+        </label>
+
+        <input class="input-btn" type="radio" id="valueIs-2" name="valueIs-radio" value="valueIs-2">
+        <label class="neon-btn" for="valueIs-2">
+            <span class="span"></span>
+            <a href="../Home/Home.html"><span class="txt">INTERMEDIATE</span></a>
+        </label>
+        
+        <input class="input-btn" type="radio" id="valueIs-3" name="valueIs-radio" value="valueIs-3">
+        <label class="neon-btn" for="valueIs-3">
+            <span class="span"></span>
+            <a href="../Home/Home.html"><span class="txt">ADVANCED</span></a>
+        </label>
+    </form>
+</body>
+</html>
