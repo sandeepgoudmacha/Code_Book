@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - CodeBook</title>
+    <!-- Add any additional stylesheets or scripts needed for the leaderboard page -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place the video behind other elements */
+        }
+
+        .leaderboard-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Make the background slightly transparent */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Place the leaderboard above the video */
+            color: #333; /* Set text color for better readability */
+        }
+
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .leaderboard-item:last-child {
+            border-bottom: none;
+        }
+
+        .data-box {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video element for the background -->
+    <video autoplay muted loop>
+        <source src="https://www.desktophut.com/files/1672869362-1672869362-rgb-abstract-landscape.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Leaderboard content goes here -->
+    <div class="leaderboard-container">
+        <h1>Leaderboard</h1>
+        <div class="leaderboard-item" id="title">
+            <span>Rank</span>
+            <span>User</span>
+            <span id="score1">Points</span>
+        </div>
+        <div class="leaderboard-item" id="user1">
+            <span>1</span>
+            <span>User1</span>
+            <span id="score1">0 points</span>
+        </div>
+
+        <div class="leaderboard-item" id="user2">
+            <span>2</span>
+            <span>User2</span>
+            <span id="score2">0 points</span>
+        </div>
+
+        <div class="leaderboard-item" id="user3">
+            <span>3</span>
+            <span>User3</span>
+            <span id="score3">0 points</span>
+        </div>
+
+        <!-- Add more leaderboard items as needed -->
+        <h3>Participate in contests to get into the leaderboard</h3>
+    </div>
+
+    <!-- Data box for displaying user score -->
+    <div class="data-box" id="userScoreBox">
+        <h3>Your Score</h3>
+        <span id="user1Score">0 points</span>
+    </div>
+
+    <script>
+        // Simulate dynamic score updates
+
+
+        // Call the updateScores function on page load (you can use it when needed)
+        window.onload = updateScores;
+    </script>
+</body>
+
+</html>

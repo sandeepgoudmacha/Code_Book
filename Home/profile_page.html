@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- Add any additional styles or links as needed -->
+    <style>
+        /* Your existing styles */
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://img.freepik.com/free-vector/space-game-background-with-landscape-planet_107791-1700.jpg?w=1060&t=st=1702750268~exp=1702750868~hmac=e4ec04eba1d53bf595e1da3c7be1daf4e019978ca5536512d199e97604c0af7b') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .profile-page {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-heading {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .user-details {
+            margin-top: 10px;
+        }
+
+        .profile-sections {
+            margin-top: 20px;
+        }
+
+        .profile-box {
+            display: block;
+            margin: 10px auto;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="profile-page" class="profile-page">
+        <h1 class="profile-heading">User Profile</h1>
+
+        <div class="profile-info">
+            <img src="https://cdn3.iconfinder.com/data/icons/e-learning-flat-education-technology/512/Learner-1024.png" alt="Profile Image" class="profile-image">
+            <div class="user-details">
+                <h2 class="username">Your Username</h2>
+                <p class="user-bio">A brief bio about yourself.</p>
+            </div>
+        </div>
+
+        <div class="profile-sections">
+            <button id="profile-button1" class="profile-box" onclick="openAchievementsPage()">
+                <h2 class="profile-topic-heading">Achievements</h2>
+            </button>
+
+            <button id="profile-button2" class="profile-box" onclick="openBadgesPage()">
+                <h2 class="profile-topic-heading">Badges</h2>
+            </button>
+
+            <button id="profile-button3" class="profile-box" onclick="openStreaksPage()">
+                <h2 class="profile-topic-heading">Streaks</h2>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openAchievementsPage() {
+            window.location.href = 'achievements_page.html'; // Replace with the actual URL of your achievements page
+        }
+
+        function openBadgesPage() {
+            window.location.href = 'badges_page.html'; // Replace with the actual URL of your badges page
+        }
+
+        function openStreaksPage() {
+            window.location.href = 'streaks_page.html'; // Replace with the actual URL of your streaks page
+        }
+    </script>
+</body>
+
+</html>

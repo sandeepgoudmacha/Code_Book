@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Languages</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #000; /* Fallback background color */
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+
+        h1 {
+            /* Additional styles for the heading, adjust as needed */
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .language-buttons {
+            /* Additional styles for the language buttons container, adjust as needed */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            /* Styles for the buttons, adjust as needed */
+            --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+            --border-width: .125em;
+            --curve-size: .5em;
+            --blur: 30px;
+            --bg: #080312;
+            --color: #afffff;
+            color: var(--color);
+            /* use position: relative; so that BG is only for .btn */
+            position: relative;
+            isolation: isolate;
+            display: inline-grid;
+            place-content: center;
+            padding: 20px 30px; /* Adjusted padding for a larger button */
+            font-size: 20px; /* Adjusted font size */
+            border: 0;
+            text-transform: uppercase;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+            clip-path: polygon(
+                /* Top-left */
+                0% var(--curve-size),
+
+                var(--curve-size) 0,
+                /* top-right */
+                100% 0,
+                100% calc(100% - var(--curve-size)),
+
+                /* bottom-right 1 */
+                calc(100% - var(--curve-size)) 100%,
+                /* bottom-right 2 */
+                0 100%);
+            transition: color 250ms;
+            display: block; /* Display the buttons as block elements */
+            margin-bottom: 10px; /* Add margin to separate the buttons */
+        }
+
+        .btn::after,
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        .btn::before {
+            background: var(--border-color);
+            background-size: 300% 300%;
+            animation: move-bg7234 5s ease infinite;
+            z-index: -2;
+        }
+
+        @keyframes move-bg7234 {
+            0% {
+                background-position: 31% 0%
+            }
+
+            50% {
+                background-position: 70% 100%
+            }
+
+            100% {
+                background-position: 31% 0%
+            }
+        }
+
+        .btn::after {
+            background: var(--bg);
+            z-index: -1;
+            clip-path: polygon(
+                /* Top-left */
+                var(--border-width)
+                calc(var(--curve-size) + var(--border-width) * .5),
+
+                calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+                /* top-right */
+                calc(100% - var(--border-width))
+                var(--border-width),
+
+                calc(100% - var(--border-width))
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+                /* bottom-right 2 */
+                var(--border-width) calc(100% - var(--border-width)));
+            transition: clip-path 500ms;
+        }
+
+        .btn:where(:hover, :focus)::after {
+            clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width))
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+
+                calc(100% - var(--border-width))
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5))
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+            transition: 200ms;
+        }
+
+        .btn:where(:hover, :focus) {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video element for the background -->
+    <video autoplay loop muted>
+        <!-- Replace 'your_video_url.mp4' with the actual URL of your video -->
+        <source src="https://www.desktophut.com/files/1672869362-1672869362-rgb-abstract-landscape.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>LANGUAGES</h1>
+
+    <div class="language-buttons">
+        <!-- Add buttons for each language class -->
+        <button class="btn" onclick="redirectToLanguage('C')">C</button>
+        <button class="btn" onclick="redirectToLanguage('C++')">C++</button>
+        <button class="btn" onclick="redirectToLanguage('Python')">Python</button>
+        <button class="btn" onclick="redirectToLanguage('Java')">Java</button>
+        <button class="btn" onclick="redirectToLanguage('Ruby')">Ruby</button>
+        <button class="btn" onclick="redirectToLanguage('C#')">C#</button>
+        <button class="btn" onclick="redirectToLanguage('DataStructures')">Data Structures</button>
+    </div>
+
+    <script>
+        // Object mapping each language to its link
+        const languageLinks = {
+            'C': 'https://www.w3schools.com/c/index.php',
+            'C++': 'https://www.w3schools.com/cpp/default.asp',
+            'Python': 'https://www.w3schools.com/python/default.asp',
+            'Java': 'https://www.w3schools.com/java/default.asp',
+            'Ruby': 'https://www.w3schools.com/r/default.asp',
+            'C#': 'https://www.w3schools.com/cs/index.php',
+            'DataStructures': 'https://www.w3schools.in/data-structures/intro',
+        };
+
+        // Function to redirect to the language-specific page
+        function redirectToLanguage(language) {
+            const link = languageLinks[language];
+            if (link) {
+                window.location.href = link;
+            }
+        }
+    </script>
+</body>
+
+</html>

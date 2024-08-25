@@ -1,0 +1,76 @@
+<!-- streaks_page.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaks Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="search.css">
+    <!-- Add any additional styles or links as needed -->
+    <style>
+        /* Add styles for the streaks page as needed */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place the video behind other elements */
+        }
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .streak-counter {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop>
+        <source src="https://www.desktophut.com/files/1672869362-1672869362-rgb-abstract-landscape.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h1>Streak Counter</h1>
+    <div class="streak-counter" id="streakCounter">0</div>
+    <br>
+    <h1>Maintain streak to improve skills easily</h1>
+    <!-- Add any additional content for the streaks page as needed -->
+
+    <script>
+        // JavaScript logic for the streaks page
+        let streakCounter = 0;
+
+        // Function to update and display the streak counter
+        function updateStreakCounter() {
+            document.getElementById('streakCounter').innerText = streakCounter;
+        }
+
+        // Function to increase the streak counter
+        function increaseStreak() {
+            streakCounter++;
+            updateStreakCounter();
+        }
+
+        // Call the function to display the initial streak counter
+        updateStreakCounter();
+    </script>
+</body>
+
+</html>
